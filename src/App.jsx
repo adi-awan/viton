@@ -2,6 +2,7 @@ import { useState } from "react";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import TryOn from "./pages/TryOn";
+import Logout from "./pages/Logout";
 
 function App() {
   const [page, setPage] = useState("home");
@@ -20,6 +21,9 @@ function App() {
 
   if (page === "tryon") {
     return <TryOn onNavigate={navigate} />;
+  }
+  if (page === "logout") {
+    return <Logout onNavigate={navigate} />;
   }
 
   return <Home onNavigate={navigate} />;
